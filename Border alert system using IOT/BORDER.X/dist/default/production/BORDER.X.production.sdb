@@ -1,0 +1,315 @@
+[p LITE_MODE AUTOSTATIC PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F877A ]
+[d frameptr 6 ]
+"38 F:\PROJECTS 2017-18\In house 2017\Dr. MGR Janaki College\Batch 1 Border alert system using IOT\BORDER.X\BORDER.c
+[v _uart_init uart_init `(v  1 e 1 0 ]
+"50
+[v _uart_txc uart_txc `(v  1 e 1 0 ]
+"57
+[v _uart_txs uart_txs `(v  1 e 1 0 ]
+"61
+[v _uart_rx uart_rx `(uc  1 e 1 0 ]
+"70
+[v _adc_init adc_init `(v  1 e 1 0 ]
+"74
+[v _adc_read adc_read `(ui  1 e 2 0 ]
+"85
+[v _timer1_init timer1_init `(v  1 e 1 0 ]
+"96
+[v _main main `(v  1 e 1 0 ]
+"174
+[v _ISR ISR `II(v  1 e 1 0 ]
+"1 C:\Program Files (x86)\Microchip\xc8\v1.42\include\lcd.h
+[v _Lcd_Port Lcd_Port `(v  1 e 1 0 ]
+"22
+[v _Lcd_Cmd Lcd_Cmd `(v  1 e 1 0 ]
+"31
+[v _Lcd_Clear Lcd_Clear `(i  1 e 2 0 ]
+"37
+[v _Lcd_Set_Cursor Lcd_Set_Cursor `(v  1 e 1 0 ]
+"58
+[v _Lcd_Init Lcd_Init `(v  1 e 1 0 ]
+"76
+[v _Lcd_Write_Char Lcd_Write_Char `(v  1 e 1 0 ]
+"92
+[v _Lcd_Write_String Lcd_Write_String `(v  1 e 1 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.42\sources\pic\eeprom.c
+[v _eecpymem eecpymem `(v  1 e 1 0 ]
+"39
+[v _memcpyee memcpyee `(v  1 e 1 0 ]
+"33 F:\PROJECTS 2017-18\In house 2017\Dr. MGR Janaki College\Batch 1 Border alert system using IOT\BORDER.X\BORDER.c
+[v _count count `ui  1 e 2 0 ]
+[v _CNT CNT `ui  1 e 2 0 ]
+[v _x x `ui  1 e 2 0 ]
+[v _y y `ui  1 e 2 0 ]
+[v _z z `ui  1 e 2 0 ]
+"35
+[v _finish finish `ui  1 e 2 0 ]
+[v _pos_cnt pos_cnt `ui  1 e 2 0 ]
+[v _lat_cnt lat_cnt `ui  1 e 2 0 ]
+[v _log_cnt log_cnt `ui  1 e 2 0 ]
+[v _flg flg `ui  1 e 2 0 ]
+[v _com_cnt com_cnt `ui  1 e 2 0 ]
+[v _lat_dir_cnt lat_dir_cnt `ui  1 e 2 0 ]
+[v _lon_dir_cnt lon_dir_cnt `ui  1 e 2 0 ]
+"36
+[v _lat lat `[20]uc  1 e 20 0 ]
+[v _lon lon `[20]uc  1 e 20 0 ]
+[v _Gpsdata Gpsdata `uc  1 e 1 0 ]
+[v _lat_dir lat_dir `[5]uc  1 e 5 0 ]
+[v _lon_dir lon_dir `[5]uc  1 e 5 0 ]
+"57 C:\Program Files (x86)\Microchip\xc8\v1.42\include\pic16f877a.h
+[v _TMR0 TMR0 `VEuc  1 e 1 @1 ]
+"452
+[v _INTCON INTCON `VEuc  1 e 1 @11 ]
+[s S52 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSPIF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+`uc 1 PSPIF 1 0 :1:7 
+]
+"547
+[u S61 . 1 `S52 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES61  1 e 1 @12 ]
+"639
+[v _TMR1L TMR1L `VEuc  1 e 1 @14 ]
+"646
+[v _TMR1H TMR1H `VEuc  1 e 1 @15 ]
+[s S73 . 1 `uc 1 TMR1ON 1 0 :1:0 
+`uc 1 TMR1CS 1 0 :1:1 
+`uc 1 nT1SYNC 1 0 :1:2 
+`uc 1 T1OSCEN 1 0 :1:3 
+`uc 1 T1CKPS 1 0 :2:4 
+]
+"678
+[s S79 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T1SYNC 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 T1CKPS0 1 0 :1:4 
+`uc 1 T1CKPS1 1 0 :1:5 
+]
+[s S85 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T1INSYNC 1 0 :1:2 
+]
+[u S88 . 1 `S73 1 . 1 0 `S79 1 . 1 0 `S85 1 . 1 0 ]
+[v _T1CONbits T1CONbits `VES88  1 e 1 @16 ]
+"1057
+[v _TXREG TXREG `VEuc  1 e 1 @25 ]
+"1064
+[v _RCREG RCREG `VEuc  1 e 1 @26 ]
+"1150
+[v _ADRESH ADRESH `VEuc  1 e 1 @30 ]
+"1157
+[v _ADCON0 ADCON0 `VEuc  1 e 1 @31 ]
+"1253
+[v _OPTION_REG OPTION_REG `VEuc  1 e 1 @129 ]
+"1323
+[v _TRISA TRISA `VEuc  1 e 1 @133 ]
+"1497
+[v _TRISD TRISD `VEuc  1 e 1 @136 ]
+[s S108 . 1 `uc 1 TMR1IE 1 0 :1:0 
+`uc 1 TMR2IE 1 0 :1:1 
+`uc 1 CCP1IE 1 0 :1:2 
+`uc 1 SSPIE 1 0 :1:3 
+`uc 1 TXIE 1 0 :1:4 
+`uc 1 RCIE 1 0 :1:5 
+`uc 1 ADIE 1 0 :1:6 
+`uc 1 PSPIE 1 0 :1:7 
+]
+"1633
+[u S117 . 1 `S108 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES117  1 e 1 @140 ]
+"2078
+[v _SPBRG SPBRG `VEuc  1 e 1 @153 ]
+"2220
+[v _ADRESL ADRESL `VEuc  1 e 1 @158 ]
+"2227
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @159 ]
+"2399
+[v _BRGH BRGH `VEb  1 e 0 @1218 ]
+"2465
+[v _CREN CREN `VEb  1 e 0 @196 ]
+"2507
+[v _GO_nDONE GO_nDONE `VEb  1 e 0 @250 ]
+"2531
+[v _OERR OERR `VEb  1 e 0 @193 ]
+"2571
+[v _RB0 RB0 `VEb  1 e 0 @48 ]
+"2573
+[v _RB1 RB1 `VEb  1 e 0 @49 ]
+"2575
+[v _RB2 RB2 `VEb  1 e 0 @50 ]
+"2577
+[v _RB3 RB3 `VEb  1 e 0 @51 ]
+"2585
+[v _RB7 RB7 `VEb  1 e 0 @55 ]
+"2615
+[v _RCIE RCIE `VEb  1 e 0 @1125 ]
+"2617
+[v _RCIF RCIF `VEb  1 e 0 @101 ]
+"2625
+[v _RD2 RD2 `VEb  1 e 0 @66 ]
+"2627
+[v _RD3 RD3 `VEb  1 e 0 @67 ]
+"2629
+[v _RD4 RD4 `VEb  1 e 0 @68 ]
+"2631
+[v _RD5 RD5 `VEb  1 e 0 @69 ]
+"2633
+[v _RD6 RD6 `VEb  1 e 0 @70 ]
+"2635
+[v _RD7 RD7 `VEb  1 e 0 @71 ]
+"2663
+[v _SPEN SPEN `VEb  1 e 0 @199 ]
+"2683
+[v _SYNC SYNC `VEb  1 e 0 @1220 ]
+"2715
+[v _TMR1IF TMR1IF `VEb  1 e 0 @96 ]
+"2745
+[v _TRISB0 TRISB0 `VEb  1 e 0 @1072 ]
+"2747
+[v _TRISB1 TRISB1 `VEb  1 e 0 @1073 ]
+"2749
+[v _TRISB2 TRISB2 `VEb  1 e 0 @1074 ]
+"2751
+[v _TRISB3 TRISB3 `VEb  1 e 0 @1075 ]
+"2757
+[v _TRISB6 TRISB6 `VEb  1 e 0 @1078 ]
+"2759
+[v _TRISB7 TRISB7 `VEb  1 e 0 @1079 ]
+"2773
+[v _TRISC6 TRISC6 `VEb  1 e 0 @1086 ]
+"2775
+[v _TRISC7 TRISC7 `VEb  1 e 0 @1087 ]
+"2809
+[v _TXEN TXEN `VEb  1 e 0 @1221 ]
+"2813
+[v _TXIF TXIF `VEb  1 e 0 @100 ]
+"96 F:\PROJECTS 2017-18\In house 2017\Dr. MGR Janaki College\Batch 1 Border alert system using IOT\BORDER.X\BORDER.c
+[v _main main `(v  1 e 1 0 ]
+{
+"172
+} 0
+"38
+[v _uart_init uart_init `(v  1 e 1 0 ]
+{
+"49
+} 0
+"85
+[v _timer1_init timer1_init `(v  1 e 1 0 ]
+{
+"94
+} 0
+"74
+[v _adc_read adc_read `(ui  1 e 2 0 ]
+{
+[v adc_read@channel channel `uc  1 a 1 wreg ]
+[v adc_read@channel channel `uc  1 a 1 wreg ]
+[v adc_read@channel channel `uc  1 a 1 4 ]
+"84
+} 0
+"70
+[v _adc_init adc_init `(v  1 e 1 0 ]
+{
+"73
+} 0
+"92 C:\Program Files (x86)\Microchip\xc8\v1.42\include\lcd.h
+[v _Lcd_Write_String Lcd_Write_String `(v  1 e 1 0 ]
+{
+"94
+[v Lcd_Write_String@i i `i  1 a 2 10 ]
+"92
+[v Lcd_Write_String@a a `*.26uc  1 p 2 5 ]
+"97
+} 0
+"76
+[v _Lcd_Write_Char Lcd_Write_Char `(v  1 e 1 0 ]
+{
+[v Lcd_Write_Char@a a `uc  1 a 1 wreg ]
+"78
+[v Lcd_Write_Char@y y `uc  1 a 1 3 ]
+[v Lcd_Write_Char@temp temp `uc  1 a 1 2 ]
+"76
+[v Lcd_Write_Char@a a `uc  1 a 1 wreg ]
+"79
+[v Lcd_Write_Char@a a `uc  1 a 1 4 ]
+"90
+} 0
+"37
+[v _Lcd_Set_Cursor Lcd_Set_Cursor `(v  1 e 1 0 ]
+{
+[v Lcd_Set_Cursor@a a `uc  1 a 1 wreg ]
+"39
+[v Lcd_Set_Cursor@temp temp `uc  1 a 1 10 ]
+[v Lcd_Set_Cursor@y y `uc  1 a 1 9 ]
+[v Lcd_Set_Cursor@z z `uc  1 a 1 8 ]
+"37
+[v Lcd_Set_Cursor@a a `uc  1 a 1 wreg ]
+[v Lcd_Set_Cursor@b b `uc  1 p 1 4 ]
+"40
+[v Lcd_Set_Cursor@a a `uc  1 a 1 7 ]
+"56
+} 0
+"58
+[v _Lcd_Init Lcd_Init `(v  1 e 1 0 ]
+{
+"74
+} 0
+"31
+[v _Lcd_Clear Lcd_Clear `(i  1 e 2 0 ]
+{
+"35
+} 0
+"22
+[v _Lcd_Cmd Lcd_Cmd `(v  1 e 1 0 ]
+{
+[v Lcd_Cmd@a a `uc  1 a 1 wreg ]
+[v Lcd_Cmd@a a `uc  1 a 1 wreg ]
+"24
+[v Lcd_Cmd@a a `uc  1 a 1 3 ]
+"29
+} 0
+"1
+[v _Lcd_Port Lcd_Port `(v  1 e 1 0 ]
+{
+[v Lcd_Port@a a `uc  1 a 1 wreg ]
+[v Lcd_Port@a a `uc  1 a 1 wreg ]
+[v Lcd_Port@a a `uc  1 a 1 0 ]
+"21
+} 0
+"174 F:\PROJECTS 2017-18\In house 2017\Dr. MGR Janaki College\Batch 1 Border alert system using IOT\BORDER.X\BORDER.c
+[v _ISR ISR `II(v  1 e 1 0 ]
+{
+"264
+} 0
+"57
+[v _uart_txs uart_txs `(v  1 e 1 0 ]
+{
+[v uart_txs@st st `*.26uc  1 p 2 3 ]
+"60
+} 0
+"50
+[v _uart_txc uart_txc `(v  1 e 1 0 ]
+{
+[v uart_txc@ch ch `uc  1 a 1 wreg ]
+"51
+[v uart_txc@i i `i  1 a 2 1 ]
+"50
+[v uart_txc@ch ch `uc  1 a 1 wreg ]
+[v uart_txc@ch ch `uc  1 a 1 0 ]
+"56
+} 0
+"61
+[v _uart_rx uart_rx `(uc  1 e 1 0 ]
+{
+"69
+} 0
